@@ -1,0 +1,12 @@
+@import '../../settings';
+
+
+header {
+  padding-left: 15px;
+  height: $column-header-height;
+  line-height: $column-header-height;
+  font-size: 16px;
+  font-weight: bold; 
+  border-top-left-radius: $column-brother-radius;
+  border-top-right-radius: $column-brother-radius;
+}

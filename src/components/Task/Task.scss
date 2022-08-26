@@ -1,0 +1,23 @@
+@import '../../settings';
+
+
+li.task-item {
+  background-color: white;
+  padding: $gap;
+  border-radius: $column-brother-radius;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.9);
+
+  &:not(:last-child) {
+    margin-bottom: $gap;
+  }
+  img{
+    display: block;
+    height: 125px;
+
+    width: calc(100% + 2 * #{$gap});
+    margin: -$gap 0 $gap (-$gap);
+
+    border-top-left-radius: $column-brother-radius;
+    border-top-right-radius: $column-brother-radius;
+  }
+}
