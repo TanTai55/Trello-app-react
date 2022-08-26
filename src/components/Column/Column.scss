@@ -1,0 +1,36 @@
+@import '../../settings';
+
+.column {
+  flex: 0 0 auto;
+  width: 300px;
+  height: calc(100% - #{$gap});
+  margin-right: 15px;
+  // margin-left: 10px;
+
+  ul.task-list {
+    list-style-type: none;
+    margin: 0;
+    max-height: calc(100% - #{$column-header-height} - 
+    #{$column-footer-height}); // Xét chính xác chiều cao của nó 
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 16 px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darken($color: $list-bg-color, $amount: 15);
+      border-right: 5px solid $list-bg-color;
+    }
+  } 
+
+  > * {
+    background-color:$list-bg-color;
+    color: #333;
+    padding: 0 8px;
+  } // Áp dụng tất cả thuộc tính này cho hg con của nó
+}
